@@ -23,12 +23,12 @@ xcodebuild archive \
     -project "$PROJECT" \
     -scheme "$SCHEME" \
     -configuration Release \
+    -destination "generic/platform=macOS" \
     -archivePath "$ARCHIVE_PATH" \
     -derivedDataPath ".build/DerivedData" \
     CODE_SIGN_IDENTITY="-" \
     CODE_SIGNING_REQUIRED=NO \
-    CODE_SIGNING_ALLOWED=NO \
-    | xcpretty || exit 1
+    CODE_SIGNING_ALLOWED=NO || exit 1
 
 # 2. Export (Simple copy for unsigned/ad-hoc)
 echo "📂 Exporting .app..."
