@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenCleanerCLI.build/master.swiftdeps"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenCleanerCLI/main.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenCleanerCLI.build/main.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenCleanerCLI.build/main.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenCleanerCLI.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenCleanerCLI.build/main.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenCleanerCLI.build/main.dia"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "": {
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/master.swiftdeps"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Engine/ScanEngine.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanEngine.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanEngine.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanEngine.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanEngine.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Engine/Scanners/AppDataScanner.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/AppDataScanner.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/AppDataScanner.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/AppDataScanner~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/AppDataScanner.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/AppDataScanner.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Engine/Scanners/CacheScanner.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CacheScanner.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CacheScanner.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CacheScanner~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CacheScanner.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CacheScanner.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Engine/Scanners/LogScanner.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/LogScanner.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/LogScanner.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/LogScanner~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/LogScanner.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/LogScanner.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Engine/Scanners/OrphanedPrefsScanner.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OrphanedPrefsScanner.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OrphanedPrefsScanner.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OrphanedPrefsScanner~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OrphanedPrefsScanner.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OrphanedPrefsScanner.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Models/CleanupItem.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CleanupItem.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CleanupItem.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CleanupItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CleanupItem.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/CleanupItem.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Models/ScanResult.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanResult.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanResult.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanResult~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanResult.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ScanResult.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/OpenMacCleanerCore.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OpenMacCleanerCore.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OpenMacCleanerCore.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OpenMacCleanerCore~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OpenMacCleanerCore.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/OpenMacCleanerCore.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Report/ReportGenerator.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ReportGenerator.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ReportGenerator.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ReportGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ReportGenerator.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/ReportGenerator.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/Sources/OpenMacCleanerCore/Safety/SafetyManager.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/SafetyManager.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/SafetyManager.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/SafetyManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/SafetyManager.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/SafetyManager.dia"
+  },
+  "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/resource_bundle_accessor.d",
+    "object": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/naoto/Scratch/open-mac-cleaner/.build/arm64-apple-macosx/debug/OpenMacCleanerCore.build/resource_bundle_accessor.dia"
+  }
+}

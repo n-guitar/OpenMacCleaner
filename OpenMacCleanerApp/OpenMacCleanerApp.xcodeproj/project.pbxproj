@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001 /* OpenMacCleanerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101 /* OpenMacCleanerApp.swift */; };
+		002 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102 /* AppViewModel.swift */; };
+		003 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103 /* MainView.swift */; };
+		004 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104 /* ScanView.swift */; };
+		006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106 /* Assets.xcassets */; };
+		5C9C4D642F0F878C00767375 /* SafetyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D602F0F878C00767375 /* SafetyManager.swift */; };
+		5C9C4D652F0F878C00767375 /* OpenMacCleanerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D622F0F878C00767375 /* OpenMacCleanerCore.swift */; };
+		5C9C4D662F0F878C00767375 /* ScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D5A2F0F878C00767375 /* ScanResult.swift */; };
+		5C9C4D672F0F878C00767375 /* CacheScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D532F0F878C00767375 /* CacheScanner.swift */; };
+		5C9C4D682F0F878C00767375 /* LogScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D542F0F878C00767375 /* LogScanner.swift */; };
+		5C9C4D692F0F878C00767375 /* OrphanedPrefsScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D552F0F878C00767375 /* OrphanedPrefsScanner.swift */; };
+		5C9C4D6A2F0F878C00767375 /* ScanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D572F0F878C00767375 /* ScanEngine.swift */; };
+		5C9C4D6B2F0F878C00767375 /* ReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D5C2F0F878C00767375 /* ReportGenerator.swift */; };
+		5C9C4D6C2F0F878C00767375 /* CleanupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D592F0F878C00767375 /* CleanupItem.swift */; };
+		5C9C4D6D2F0F878C00767375 /* AppDataScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C4D522F0F878C00767375 /* AppDataScanner.swift */; };
+		5C9C4D6E2F0F878C00767375 /* Placeholder.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C9C4D5E2F0F878C00767375 /* Placeholder.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		010 /* OpenMacCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMacCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		101 /* OpenMacCleanerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMacCleanerApp.swift; sourceTree = "<group>"; };
+		102 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		103 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		104 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C9C4D522F0F878C00767375 /* AppDataScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataScanner.swift; sourceTree = "<group>"; };
+		5C9C4D532F0F878C00767375 /* CacheScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheScanner.swift; sourceTree = "<group>"; };
+		5C9C4D542F0F878C00767375 /* LogScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogScanner.swift; sourceTree = "<group>"; };
+		5C9C4D552F0F878C00767375 /* OrphanedPrefsScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrphanedPrefsScanner.swift; sourceTree = "<group>"; };
+		5C9C4D572F0F878C00767375 /* ScanEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanEngine.swift; sourceTree = "<group>"; };
+		5C9C4D592F0F878C00767375 /* CleanupItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupItem.swift; sourceTree = "<group>"; };
+		5C9C4D5A2F0F878C00767375 /* ScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResult.swift; sourceTree = "<group>"; };
+		5C9C4D5C2F0F878C00767375 /* ReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGenerator.swift; sourceTree = "<group>"; };
+		5C9C4D5E2F0F878C00767375 /* Placeholder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Placeholder.json; sourceTree = "<group>"; };
+		5C9C4D602F0F878C00767375 /* SafetyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyManager.swift; sourceTree = "<group>"; };
+		5C9C4D622F0F878C00767375 /* OpenMacCleanerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMacCleanerCore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		030 = {
+			isa = PBXGroup;
+			children = (
+				031 /* OpenMacCleanerApp */,
+				032 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		031 /* OpenMacCleanerApp */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D632F0F878C00767375 /* OpenMacCleanerCore */,
+				101 /* OpenMacCleanerApp.swift */,
+				033 /* Views */,
+				034 /* ViewModels */,
+				106 /* Assets.xcassets */,
+			);
+			path = OpenMacCleanerApp;
+			sourceTree = "<group>";
+		};
+		032 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				010 /* OpenMacCleanerApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		033 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				103 /* MainView.swift */,
+				104 /* ScanView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		034 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				102 /* AppViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5C9C4D562F0F878C00767375 /* Scanners */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D522F0F878C00767375 /* AppDataScanner.swift */,
+				5C9C4D532F0F878C00767375 /* CacheScanner.swift */,
+				5C9C4D542F0F878C00767375 /* LogScanner.swift */,
+				5C9C4D552F0F878C00767375 /* OrphanedPrefsScanner.swift */,
+			);
+			path = Scanners;
+			sourceTree = "<group>";
+		};
+		5C9C4D582F0F878C00767375 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D562F0F878C00767375 /* Scanners */,
+				5C9C4D572F0F878C00767375 /* ScanEngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		5C9C4D5B2F0F878C00767375 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D592F0F878C00767375 /* CleanupItem.swift */,
+				5C9C4D5A2F0F878C00767375 /* ScanResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C9C4D5D2F0F878C00767375 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D5C2F0F878C00767375 /* ReportGenerator.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		5C9C4D5F2F0F878C00767375 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D5E2F0F878C00767375 /* Placeholder.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5C9C4D612F0F878C00767375 /* Safety */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D602F0F878C00767375 /* SafetyManager.swift */,
+			);
+			path = Safety;
+			sourceTree = "<group>";
+		};
+		5C9C4D632F0F878C00767375 /* OpenMacCleanerCore */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C4D582F0F878C00767375 /* Engine */,
+				5C9C4D5B2F0F878C00767375 /* Models */,
+				5C9C4D5D2F0F878C00767375 /* Report */,
+				5C9C4D5F2F0F878C00767375 /* Resources */,
+				5C9C4D612F0F878C00767375 /* Safety */,
+				5C9C4D622F0F878C00767375 /* OpenMacCleanerCore.swift */,
+			);
+			path = OpenMacCleanerCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		040 /* OpenMacCleanerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050 /* Build configuration list for PBXNativeTarget "OpenMacCleanerApp" */;
+			buildPhases = (
+				041 /* Sources */,
+				020 /* Frameworks */,
+				042 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenMacCleanerApp;
+			productName = OpenMacCleanerApp;
+			productReference = 010 /* OpenMacCleanerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		060 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					040 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 061 /* Build configuration list for PBXProject "OpenMacCleanerApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ja;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ja,
+				Base,
+			);
+			mainGroup = 030;
+			productRefGroup = 032 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				040 /* OpenMacCleanerApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		042 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006 /* Assets.xcassets in Resources */,
+				5C9C4D6E2F0F878C00767375 /* Placeholder.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001 /* OpenMacCleanerApp.swift in Sources */,
+				5C9C4D642F0F878C00767375 /* SafetyManager.swift in Sources */,
+				5C9C4D652F0F878C00767375 /* OpenMacCleanerCore.swift in Sources */,
+				5C9C4D662F0F878C00767375 /* ScanResult.swift in Sources */,
+				5C9C4D672F0F878C00767375 /* CacheScanner.swift in Sources */,
+				5C9C4D682F0F878C00767375 /* LogScanner.swift in Sources */,
+				5C9C4D692F0F878C00767375 /* OrphanedPrefsScanner.swift in Sources */,
+				5C9C4D6A2F0F878C00767375 /* ScanEngine.swift in Sources */,
+				5C9C4D6B2F0F878C00767375 /* ReportGenerator.swift in Sources */,
+				5C9C4D6C2F0F878C00767375 /* CleanupItem.swift in Sources */,
+				5C9C4D6D2F0F878C00767375 /* AppDataScanner.swift in Sources */,
+				002 /* AppViewModel.swift in Sources */,
+				003 /* MainView.swift in Sources */,
+				004 /* ScanView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		072 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenMacCleanerApp/OpenMacCleanerApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "OpenMacCleaner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OpenMacCleanerApp;
+				PRODUCT_NAME = "OpenMacCleaner";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenMacCleanerApp/OpenMacCleanerApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "OpenMacCleaner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OpenMacCleanerApp;
+				PRODUCT_NAME = "OpenMacCleaner";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		050 /* Build configuration list for PBXNativeTarget "OpenMacCleanerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072 /* Debug */,
+				073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		061 /* Build configuration list for PBXProject "OpenMacCleanerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070 /* Debug */,
+				071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 060 /* Project object */;
+}
