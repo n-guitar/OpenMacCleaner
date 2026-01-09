@@ -103,24 +103,29 @@ public struct TrashScanner: Scanner {
     public func scan() async throws -> [CleanupItem] {
         var items: [CleanupItem] = []
         
-        // Explicitly check ~/.Trash as it's the most reliable for this use case
-        let homeTrashURL = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent(".Trash")
-        let standardTrashURL = fileManager.urls(for: .trashDirectory, in: .userDomainMask).first
+        // Use the standard trash directory API (this is the canonical path)
+        guard let trashURL = fileManager.urls(for: .trashDirectory, in: .userDomainMask).first else {
+            print("TrashScanner: Could not find trash directory")
+            return items
+        }
         
-        let trashURL = homeTrashURL // Prefer explicit path for now
-        
-        print("Scanning Trash at: \(trashURL.path)")
+        print("TrashScanner: Scanning \(trashURL.path)")
         
         let resourceKeys: [URLResourceKey] = [.fileSizeKey, .contentModificationDateKey, .nameKey, .isDirectoryKey]
+        
+        guard fileManager.fileExists(atPath: trashURL.path) else {
+            print("TrashScanner: Trash path does not exist: \(trashURL.path)")
+            return items
+        }
         
         do {
             let fileURLs = try fileManager.contentsOfDirectory(
                 at: trashURL,
                 includingPropertiesForKeys: resourceKeys,
-                options: [] // Don't skip hidden files, just in case
+                options: []
             )
             
-            print("Found \(fileURLs.count) items in Trash")
+            print("TrashScanner: Found \(fileURLs.count) items")
             
             for fileURL in fileURLs {
                 // Skip .DS_Store
@@ -149,7 +154,7 @@ public struct TrashScanner: Scanner {
                     path: fileURL,
                     size: size,
                     category: .trash,
-                    riskLevel: .yellow, // Caution
+                    riskLevel: .yellow,
                     reason: LocalizedReason(
                         en: "Item in Trash",
                         ja: "ゴミ箱にある項目"
@@ -159,29 +164,10 @@ public struct TrashScanner: Scanner {
                 items.append(item)
             }
         } catch {
-            print("Trash scan error: \(error)")
-            
-            // If explicit path fails, try standard URL as fallback
-            if let standardUrl = standardTrashURL, standardUrl != trashURL {
-                 print("Retrying with standard URL: \(standardUrl.path)")
-                 // ... (Simplified logic)
-            }
-            
-            // Return a placeholder item to inform the user about permissions
-            let errorItem = CleanupItem(
-                path: trashURL,
-                size: 0,
-                category: .trash,
-                riskLevel: .red,
-                reason: LocalizedReason(
-                    en: "Requires Full Disk Access",
-                    ja: "アクセスにはフルディスク権限が必要です（システム設定 > プライバシーとセキュリティ）"
-                ),
-                lastModified: Date()
-            )
-            items.append(errorItem)
+            print("TrashScanner: Error scanning \(trashURL.path): \(error)")
         }
         
+        print("TrashScanner: Returning \(items.count) items")
         return items
     }
     

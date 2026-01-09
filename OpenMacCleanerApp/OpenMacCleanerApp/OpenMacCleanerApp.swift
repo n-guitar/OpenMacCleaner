@@ -36,6 +36,8 @@ struct OpenMacCleanerApp: App {
 struct OnboardingView: View {
     @ObservedObject var viewModel: AppViewModel
     @EnvironmentObject var l10n: LocalizationManager
+    @State private var showDebugAlert = false
+    @State private var debugInfo = ""
     
     var body: some View {
         VStack(spacing: 32) {
@@ -127,6 +129,9 @@ struct OnboardingView: View {
                 .frame(width: 280)
                 
                 Button {
+                    let result = PermissionManager.checkFullDiskAccessDebug()
+                    debugInfo = result
+                    showDebugAlert = true
                     viewModel.checkPermission()
                 } label: {
                     HStack {
@@ -136,6 +141,11 @@ struct OnboardingView: View {
                     .foregroundColor(.secondary)
                 }
                 .buttonStyle(.plain)
+            }
+            .alert("Debug Info", isPresented: $showDebugAlert) {
+                Button("OK") { }
+            } message: {
+                Text(debugInfo)
             }
         }
         .padding(48)
@@ -170,21 +180,28 @@ struct OnboardingView: View {
 }
 
 import AppKit
+import Foundation
 
 struct PermissionManager {
     /// Check if the app has Full Disk Access
     /// The most reliable way is to try to read a protected file/directory
     static func checkFullDiskAccess() -> Bool {
-        // Checking ~/.Trash or ~/Library/Safari is a good litmus test
         let fileManager = FileManager.default
-        let home = URL(fileURLWithPath: NSHomeDirectory())
-        let target = home.appendingPathComponent("Library/Safari")
+        let home = fileManager.homeDirectoryForCurrentUser
+        let safari = home.appendingPathComponent("Library/Safari")
         
-        // trying to list the directory contents triggers TCC
+        // Simple check: can we read the Safari directory?
+        let result = fileManager.isReadableFile(atPath: safari.path)
+        print("FDA Check - Safari isReadable: \(result)")
+        return result
+    }
+    
+    private static func canList(_ url: URL) -> Bool {
         do {
-            _ = try fileManager.contentsOfDirectory(at: target, includingPropertiesForKeys: nil)
+            _ = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: nil)
             return true
         } catch {
+            print("FDA Check Error for \(url.path): \(error)")
             return false
         }
     }
@@ -195,7 +212,51 @@ struct PermissionManager {
             NSWorkspace.shared.open(url)
         }
     }
+    
+    /// Debug version that returns detailed info
+    static func checkFullDiskAccessDebug() -> String {
+        let fileManager = FileManager.default
+        let home = URL(fileURLWithPath: NSHomeDirectory())
+        var results: [String] = []
+        
+        results.append("Home: \(home.path)")
+        
+        // Check 1: Safari
+        let safari = home.appendingPathComponent("Library/Safari")
+        let safariExists = fileManager.fileExists(atPath: safari.path)
+        results.append("Safari exists: \(safariExists)")
+        
+        do {
+            let contents = try fileManager.contentsOfDirectory(atPath: safari.path)
+            results.append("Safari readable: YES (\(contents.count) items)")
+        } catch {
+            results.append("Safari readable: NO (\(error.localizedDescription))")
+        }
+        
+        // Check 2: Mail
+        let mail = home.appendingPathComponent("Library/Mail")
+        let mailExists = fileManager.fileExists(atPath: mail.path)
+        results.append("Mail exists: \(mailExists)")
+        
+        if mailExists {
+            do {
+                let contents = try fileManager.contentsOfDirectory(atPath: mail.path)
+                results.append("Mail readable: YES (\(contents.count) items)")
+            } catch {
+                results.append("Mail readable: NO (\(error.localizedDescription))")
+            }
+        }
+        
+        // Check 3: TCC.db
+        let tccPath = "/Library/Application Support/com.apple.TCC/TCC.db"
+        let tccReadable = fileManager.isReadableFile(atPath: tccPath)
+        results.append("TCC.db readable: \(tccReadable)")
+        
+        return results.joined(separator: "\n")
+    }
 }
+
+
 
 // MARK: - Consolidated Settings View
 struct SettingsView: View {
