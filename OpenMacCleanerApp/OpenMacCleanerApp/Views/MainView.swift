@@ -119,6 +119,7 @@ struct CategoryColumn: View {
                         withAnimation(.easeOut(duration: 0.15)) {
                             viewModel.selectedCategoryGroup = group.name
                             viewModel.selectedSubCategory = nil
+                            viewModel.selectedRiskFilter = nil // Reset filter to avoid confusion
                         }
                     }
                 }
@@ -519,6 +520,11 @@ struct BottomActionBar: View {
                 Button(l10n.localized("cancel"), role: .cancel) { }
             } message: {
                 Text(viewModel.deleteConfirmationMessage)
+            }
+            .alert("Error", isPresented: $viewModel.showErrorAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(viewModel.errorMessage ?? "Unknown error occurred")
             }
         }
         .padding()

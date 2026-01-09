@@ -15,8 +15,8 @@ public actor SafetyManager {
     
     private func loadDefaultWhitelist() {
         // Apple system components
-        whitelist.insert("com.apple")
-        whitelist.insert("Apple")
+        // whitelist.insert("com.apple") // Too restrictive for caches
+        // whitelist.insert("Apple")     // Too restrictive
         
         // Security software
         whitelist.insert("com.malwarebytes")

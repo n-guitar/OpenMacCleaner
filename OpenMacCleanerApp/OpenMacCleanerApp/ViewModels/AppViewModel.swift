@@ -17,6 +17,8 @@ class AppViewModel: ObservableObject {
     @Published var sortBy: SortOption = .size
     @Published var showDeleteConfirmation = false
     @Published var hasFullDiskAccess = false
+    @Published var errorMessage: String?
+    @Published var showErrorAlert = false
     
     enum SortOption {
         case size, name
@@ -414,13 +416,22 @@ class AppViewModel: ObservableObject {
             // Process results
             var remainingItems = currentResult.items
             var successIds: Set<UUID> = []
+            var errors: [String] = []
             
             for result in results {
                 if result.success {
                     successIds.insert(result.item.id)
                 } else {
-                    print("Failed to delete \(result.item.path.lastPathComponent): \(result.error ?? "Unknown error")")
+                    let msg = "Failed to delete \(result.item.path.lastPathComponent): \(result.error ?? "Unknown error")"
+                    print(msg)
+                    errors.append(msg)
                 }
+            }
+            
+            if !errors.isEmpty {
+                // Show the first error or a summary to the user
+                errorMessage = errors.joined(separator: "\n")
+                showErrorAlert = true
             }
             
             // Remove deleted items

@@ -126,14 +126,23 @@ public struct TrashScanner: Scanner {
                 // Skip .DS_Store
                 if fileURL.lastPathComponent == ".DS_Store" { continue }
                 
-                let resources = try fileURL.resourceValues(forKeys: Set(resourceKeys))
+                // Attempt to read resources, but fallback if it fails
+                var fileSize: Int64 = 0
+                var modDate: Date? = nil
+                var isDirectory: Bool = false
+                
+                if let resources = try? fileURL.resourceValues(forKeys: Set(resourceKeys)) {
+                    fileSize = Int64(resources.fileSize ?? 0)
+                    modDate = resources.contentModificationDate
+                    isDirectory = resources.isDirectory ?? false
+                }
                 
                 // Calculate size recursively if it's a directory
                 let size: Int64
-                if resources.isDirectory == true {
+                if isDirectory {
                     size = calculateDirectorySize(at: fileURL)
                 } else {
-                    size = Int64(resources.fileSize ?? 0)
+                    size = fileSize
                 }
                 
                 let item = CleanupItem(
@@ -145,7 +154,7 @@ public struct TrashScanner: Scanner {
                         en: "Item in Trash",
                         ja: "ゴミ箱にある項目"
                     ),
-                    lastModified: resources.contentModificationDate
+                    lastModified: modDate
                 )
                 items.append(item)
             }
