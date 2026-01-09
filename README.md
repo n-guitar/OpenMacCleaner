@@ -40,20 +40,36 @@ OpenMacCleaner scans your system for various types of junk files, including appl
 - macOS 13.0 (Ventura) or later
 - Xcode 15+ (for building)
 
-## Build & Run
+## Installation
 
+Download the latest version from the [Releases page](https://github.com/n-guitar/OpenMacCleaner/releases).
+
+1. Unzip `OpenMacCleaner.zip`.
+2. Move `OpenMacCleaner.app` to your Applications folder.
+3. Open the app (you may need to right-click and select "Open" to bypass Gatekeeper).
+
+## Build & Release (for Developers)
+
+### Setup
 1. Clone the repository.
    ```bash
-   git clone https://github.com/your-repo/OpenMacCleaner.git
+   git clone https://github.com/n-guitar/OpenMacCleaner.git
    cd OpenMacCleaner
    ```
-
-2. Open the project in Xcode.
+2. Install GitHub CLI (`gh`) if you want to automate releases.
    ```bash
-   open OpenMacCleanerApp/OpenMacCleanerApp.xcodeproj
+   brew install gh
    ```
 
-3. Build and Run (Cmd+R).
+### Manual Build
+Open `OpenMacCleanerApp/OpenMacCleanerApp.xcodeproj` in Xcode and press Cmd+R.
+
+### Create a Release via CLI
+You can automatically build, zip, and release to GitHub using the included script:
+```bash
+./release.sh
+```
+*Note: Requires `gh` login permissions.*
 
 ## License
 

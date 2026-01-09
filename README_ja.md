@@ -40,20 +40,36 @@ OpenMacCleanerは、アプリケーションキャッシュ、ログ、未使用
 - macOS 13.0 (Ventura) 以降
 - Xcode 15+ (ビルドする場合)
 
-## ビルドと実行
+## インストール
 
+[Releasesページ](https://github.com/n-guitar/OpenMacCleaner/releases) から最新版をダウンロードしてください。
+
+1. `OpenMacCleaner.zip` を解凍します。
+2. `OpenMacCleaner.app` をアプリケーションフォルダに移動します。
+3. アプリを開きます（未署名のため、初回は右クリックして「開く」を選択し、Gatekeeperを回避してください）。
+
+## ビルドとリリース (開発者向け)
+
+### セットアップ
 1. リポジトリをクローンします。
    ```bash
-   git clone https://github.com/your-repo/OpenMacCleaner.git
+   git clone https://github.com/n-guitar/OpenMacCleaner.git
    cd OpenMacCleaner
    ```
-
-2. Xcodeでプロジェクトを開きます。
+2. 自動リリースを利用する場合は GitHub CLI (`gh`) をインストールします。
    ```bash
-   open OpenMacCleanerApp/OpenMacCleanerApp.xcodeproj
+   brew install gh
    ```
 
-3. ビルドして実行します (Cmd+R)。
+### 手動ビルド
+Xcodeで `OpenMacCleanerApp/OpenMacCleanerApp.xcodeproj` を開き、Cmd+R で実行します。
+
+### CLIによるリリース作成
+付属のスクリプトを使用して、ビルド、Zip圧縮、GitHubへのリリース作成を自動化できます：
+```bash
+./release.sh
+```
+*注意: `gh` コマンドへのログインが必要です。*
 
 ## ライセンス
 
