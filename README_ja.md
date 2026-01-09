@@ -40,19 +40,11 @@ OpenMacCleanerは、アプリケーションキャッシュ、ログ、未使用
 - macOS 13.0 (Ventura) 以降
 - Xcode 15+ (ビルドする場合)
 
-## インストール
-
-[Releasesページ](https://github.com/n-guitar/OpenMacCleaner/releases) から最新版をダウンロードしてください。
-
-1. `OpenMacCleaner.zip` を解凍します。
-2. `OpenMacCleaner.app` をアプリケーションフォルダに移動します。
-3. アプリを開きます（未署名のため、初回は右クリックして「開く」を選択する必要がある場合があります）。
-
-## ビルドと実行 (開発者向け)
+## ビルドと実行
 
 1. リポジトリをクローンします。
    ```bash
-   git clone https://github.com/n-guitar/OpenMacCleaner.git
+   git clone https://github.com/your-repo/OpenMacCleaner.git
    cd OpenMacCleaner
    ```
 
